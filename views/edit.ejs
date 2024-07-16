@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__subtitle">Edit Article</h2>
+            <form class="edit__form action="/edit/<%= article.id %>" method="POST">
+                <label class="edit__title" for="title">Title:</label>
+                <input class="edit__input" type="text" id="title" name="title" value="<%= article.title %>" required>
+                <label class="edit__title" for="content">Content:</label>
+                <textarea class="edit__content" id="content" name="content" required><%= article.content %></textarea>
+                <button class="edit__btn" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
